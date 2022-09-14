@@ -1,10 +1,12 @@
 ﻿namespace CryptoService
 {
+    using CryptoService.Interface;
     using System;
     using System.Security.Cryptography;
     using System.Text;
-    public class MD5
+    public class MD5: IAction
     {
+        readonly IMD5 Algorithm = new Algorithms();
         /// <summary>
         /// Encrypt a string using dual encryption method. Return a encrypted cipher Text
         /// </summary>
@@ -76,5 +78,9 @@
             return Encoding.UTF8.GetString(resultArray);
         }
         #endregion
+
+        public string Encrypt(ICipherInput cipherInput) => Algorithm.Encrypt(cipherInput: cipherInput);
+
+        public string Decrypt(ICipherInput cipherInput) => Algorithm.Decrypt(cipherInput: cipherInput);
     }
 }

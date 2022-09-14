@@ -1,11 +1,13 @@
 ﻿namespace CryptoService
 {
+    using CryptoService.Interface;
     using System;
     using System.IO;
     using System.Security.Cryptography;
     using System.Text;
-    public class AES
+    public class AES : IAction
     {
+        readonly IAES Algorithm = new Algorithms();
         public static string DecryptStringAES(string cipherText, string key, string hash)
         {
             var keybytes = Encoding.UTF8.GetBytes(key);
@@ -95,5 +97,9 @@
             }
             return encrypted;
         }
+
+        public string Decrypt(ICipherInput cipherInput) => Algorithm.Decrypt(cipherInput: cipherInput);
+
+        public string Encrypt(ICipherInput cipherInput) => Algorithm.Encrypt(cipherInput: cipherInput);
     }
 }
