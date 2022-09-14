@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Narender.K\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj",
-        "projectName": "CryptoService",
+        "projectName": "WebSvc.CryptoService",
         "projectPath": "C:\\Narender.K\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj",
         "packagesPath": "C:\\Users\\narender.kumar\\.nuget\\packages\\",
         "outputPath": "C:\\Narender.K\\CryptoService\\CryptoService\\CryptoService\\obj\\",

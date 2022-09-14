@@ -2,10 +2,32 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <PackageId>WebSvc.CryptoService</PackageId>
+    <Authors>Narender Kumar</Authors>
+    <Company>Web Svc</Company>
+    <Description>Data Encryption Algorithms
+MD5
+AES
+Checksum</Description>
+    <PackageLicenseFile>EULA.txt</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/web-svc/CryptoService</RepositoryUrl>
+    <RepositoryType>public</RepositoryType>
+    <PackageTags>Web Svc, WebSvc, Crypto, Crypto Services, Data Encryption Algorithms, MD5, AES, Checksum</PackageTags>
+    <PackageReleaseNotes>Data Encryption Algorithms
+MD5
+AES
+Checksum</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
     <Folder Include="Extentsion\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\EULA.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
