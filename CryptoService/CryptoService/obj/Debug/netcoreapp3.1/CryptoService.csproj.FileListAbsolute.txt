@@ -1,0 +1,10 @@
+C:\Narender.K\CryptoService\CryptoService\CryptoService\bin\Debug\netcoreapp3.1\CryptoService.deps.json
+C:\Narender.K\CryptoService\CryptoService\CryptoService\bin\Debug\netcoreapp3.1\CryptoService.dll
+C:\Narender.K\CryptoService\CryptoService\CryptoService\bin\Debug\netcoreapp3.1\CryptoService.pdb
+C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Debug\netcoreapp3.1\CryptoService.csproj.AssemblyReference.cache
+C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Debug\netcoreapp3.1\CryptoService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Debug\netcoreapp3.1\CryptoService.AssemblyInfoInputs.cache
+C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Debug\netcoreapp3.1\CryptoService.AssemblyInfo.cs
+C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Debug\netcoreapp3.1\CryptoService.csproj.CoreCompileInputs.cache
+C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Debug\netcoreapp3.1\CryptoService.dll
+C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Debug\netcoreapp3.1\CryptoService.pdb
