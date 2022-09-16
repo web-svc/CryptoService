@@ -7,7 +7,7 @@
     using System.Security.Cryptography;
     using System.Text;
 
-    public class Algorithms : IAlgorithms, IChecksum, IMD5, IAES
+    public class Algorithms : IAlgorithms, IChecksum, IMD5, IAES, IBase64
     {
         readonly IMD5 Algorithm = new Algorithms();
         string IChecksum.Generate(string CipherText)
@@ -99,6 +99,16 @@
             using var csDecrypt = new CryptoStream(msDecrypt, decryptor, CryptoStreamMode.Read);
             using var srDecrypt = new StreamReader(csDecrypt);
             return srDecrypt.ReadToEnd();
+        }
+
+        string IBase64.Encrypt(string CipherText)
+        {
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(CipherText));
+        }
+
+        string IBase64.Decrypt(string CipherText)
+        {
+            return Encoding.UTF8.GetString(Convert.FromBase64String(CipherText));
         }
     }
 }
