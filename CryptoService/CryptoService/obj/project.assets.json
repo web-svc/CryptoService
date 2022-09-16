@@ -16,11 +16,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Narender.K\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj",
+      "projectUniqueName": "C:\\git\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj",
       "projectName": "WebSvc.CryptoService",
-      "projectPath": "C:\\Narender.K\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj",
+      "projectPath": "C:\\git\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj",
       "packagesPath": "C:\\Users\\narender.kumar\\.nuget\\packages\\",
-      "outputPath": "C:\\Narender.K\\CryptoService\\CryptoService\\CryptoService\\obj\\",
+      "outputPath": "C:\\git\\CryptoService\\CryptoService\\CryptoService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
