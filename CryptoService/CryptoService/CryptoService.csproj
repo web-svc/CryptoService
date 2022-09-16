@@ -16,7 +16,9 @@ Checksum</Description>
     <PackageReleaseNotes>Data Encryption Algorithms
 MD5
 AES
-Checksum</PackageReleaseNotes>
+Checksum
+Base64</PackageReleaseNotes>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -24,7 +26,7 @@ Checksum</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\..\EULA.txt">
+    <None Include="..\..\..\..\Narender.K\EULA.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
