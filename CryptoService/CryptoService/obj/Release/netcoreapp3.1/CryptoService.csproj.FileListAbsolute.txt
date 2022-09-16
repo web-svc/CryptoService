@@ -8,3 +8,13 @@ C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.
 C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.csproj.CoreCompileInputs.cache
 C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.dll
 C:\Narender.K\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.pdb
+C:\git\CryptoService\CryptoService\CryptoService\bin\Release\netcoreapp3.1\CryptoService.deps.json
+C:\git\CryptoService\CryptoService\CryptoService\bin\Release\netcoreapp3.1\CryptoService.dll
+C:\git\CryptoService\CryptoService\CryptoService\bin\Release\netcoreapp3.1\CryptoService.pdb
+C:\git\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.csproj.AssemblyReference.cache
+C:\git\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.AssemblyInfoInputs.cache
+C:\git\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.AssemblyInfo.cs
+C:\git\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.csproj.CoreCompileInputs.cache
+C:\git\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.dll
+C:\git\CryptoService\CryptoService\CryptoService\obj\Release\netcoreapp3.1\CryptoService.pdb
