@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\git\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "C:\\git\\CryptoService\\CryptoService\\CryptoService\\CryptoService.csproj",
         "projectName": "WebSvc.CryptoService",

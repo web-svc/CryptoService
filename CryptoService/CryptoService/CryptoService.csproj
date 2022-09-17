@@ -8,7 +8,8 @@
     <Description>Data Encryption Algorithms
 MD5
 AES
-Checksum</Description>
+Checksum
+AuthService: GenerateBasicAuth, DecodeBasicAuth</Description>
     <PackageLicenseFile>EULA.txt</PackageLicenseFile>
     <RepositoryUrl>https://github.com/web-svc/CryptoService</RepositoryUrl>
     <RepositoryType>public</RepositoryType>
@@ -18,7 +19,7 @@ MD5
 AES
 Checksum
 Base64</PackageReleaseNotes>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>
