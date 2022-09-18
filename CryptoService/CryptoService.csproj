@@ -20,7 +20,7 @@ AES
 Checksum
 Base64
 Auth Service: Basic &amp; Bearer</PackageReleaseNotes>
-    <Version>1.0.6</Version>
+    <Version>1.0.7</Version>
   </PropertyGroup>
 
   <ItemGroup>
