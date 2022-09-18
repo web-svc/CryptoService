@@ -18,8 +18,9 @@ AuthService: GenerateBasicAuth, DecodeBasicAuth</Description>
 MD5
 AES
 Checksum
-Base64</PackageReleaseNotes>
-    <Version>1.0.5</Version>
+Base64
+Auth Service: Basic &amp; Bearer</PackageReleaseNotes>
+    <Version>1.0.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
