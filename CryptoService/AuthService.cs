@@ -8,12 +8,12 @@
     {
         readonly IBase64 base64 = new Algorithms();
 
-        public string ConstructBearerAuth(string CipherText)
+        string IAuthService.ConstructBearerAuth(string CipherText)
         {
             return $"{Const.BearerAuth} {CipherText}";
         }
 
-        public string DecodeBearerToken(string CipherText)
+        string IAuthService.DecodeBearerToken(string CipherText)
         {
             return CipherText.Replace($"{Const.BasicAuth} ", string.Empty);
         }
