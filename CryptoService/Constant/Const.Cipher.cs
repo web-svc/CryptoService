@@ -4,5 +4,6 @@
     {
         internal const string CipherKey = "d4458dca-3a3c-47ec-b845-a3ca105727f7";
         internal const string BasicAuth = "Basic";
+        internal const string BearerAuth = "Bearer";
     }
 }

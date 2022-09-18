@@ -19,7 +19,7 @@ MD5
 AES
 Checksum
 Base64</PackageReleaseNotes>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +28,10 @@ Base64</PackageReleaseNotes>
 
   <ItemGroup>
     <None Include="..\..\..\..\Narender.K\EULA.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\EULA.txt">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
