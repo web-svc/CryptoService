@@ -9,14 +9,13 @@
 
     public class Algorithms : IAlgorithms, IChecksum, IMD5, IAES, IBase64
     {
-        readonly IMD5 Algorithm = new Algorithms();
         string IChecksum.Generate(string CipherText)
         {
             using System.Security.Cryptography.MD5 md5 = System.Security.Cryptography.MD5.Create();
             return BitConverter.ToString(md5.ComputeHash(Encoding.UTF8.GetBytes(CipherText))).Replace("-", string.Empty).ToLower();
         }
 
-        byte[] IMD5.GetHashCode(string CipherKey)
+        public byte[] GetHashCode(string CipherKey)
         {
             using var objMd5CryptoServiceProvider = new MD5CryptoServiceProvider();
             var CipherKeyArray = objMd5CryptoServiceProvider.ComputeHash(Encoding.UTF8.GetBytes(CipherKey));
@@ -29,7 +28,7 @@
             cipherInput.CipherKey = string.IsNullOrEmpty(cipherInput.CipherKey) ? Const.CipherKey : cipherInput.CipherKey;
 
             byte[] CipherTextArray = Convert.FromBase64String(cipherInput.CipherText);
-            byte[] CipherKeyArray = cipherInput.UseHashing ? Algorithm.GetHashCode(cipherInput.CipherKey) : Encoding.UTF8.GetBytes(cipherInput.CipherKey);
+            byte[] CipherKeyArray = cipherInput.UseHashing ? GetHashCode(cipherInput.CipherKey) : Encoding.UTF8.GetBytes(cipherInput.CipherKey);
 
             using var objTripleDesCryptoServiceProvider = new TripleDESCryptoServiceProvider
             {
@@ -49,7 +48,7 @@
             cipherInput.CipherKey = string.IsNullOrEmpty(cipherInput.CipherKey) ? Const.CipherKey : cipherInput.CipherKey;
 
             byte[] CipherTextArray = Encoding.UTF8.GetBytes(cipherInput.CipherText);
-            byte[] CipherKeyArray = cipherInput.UseHashing ? Algorithm.GetHashCode(cipherInput.CipherKey) : Encoding.UTF8.GetBytes(cipherInput.CipherKey);
+            byte[] CipherKeyArray = cipherInput.UseHashing ? GetHashCode(cipherInput.CipherKey) : Encoding.UTF8.GetBytes(cipherInput.CipherKey);
 
             using var objTripleDesCryptoServiceProvider = new TripleDESCryptoServiceProvider
             {
