@@ -11,5 +11,6 @@ namespace CryptoService.Interface
         IBasicAuthInput DecodeBasicAuthWithHeader(string BasicAuthText);
         IBasicAuthInput DecodeBasicAuth(string CipherText);
         string DecodeBearerToken(string CipherText);
+        string GetOAuthSignature(string compositeKey, Dictionary<string, string> form, string BaseUrl, string UrlQueryString = null);
     }
 }

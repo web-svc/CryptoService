@@ -6,6 +6,8 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using System.Security.Cryptography;
+    using System.Text;
 
     public class AuthService : IAuthService
     {
@@ -45,6 +47,26 @@
         {
             string CipherText = string.Join(", ", OAuthInput.Select(x => $"{x.Key}=\"{Uri.EscapeDataString(x.Value)}\"").ToArray());
             return $"{Const.OAuth} {CipherText}";
+        }
+
+        public string GetOAuthSignature(string compositeKey, Dictionary<string, string> form, string BaseUrl, string UrlQueryString = null)
+        {
+            string baseString = string.Join("&", form.Select(x => $"{x.Key}={x.Value}").ToArray());
+            string CipherText = $"GET&{Uri.EscapeDataString(BaseUrl)}{(string.IsNullOrEmpty(UrlQueryString) ? $"&" : $"&{UrlQueryString}{UrlEncode("&")}")}{Uri.EscapeDataString(baseString)}";
+            using HMACSHA1 hasher = new HMACSHA1(Encoding.ASCII.GetBytes(compositeKey));
+            return Convert.ToBase64String(hasher.ComputeHash(Encoding.ASCII.GetBytes(CipherText)));
+        }
+        private static string UrlEncode(string value)
+        {
+            var stringBuilder = new StringBuilder();
+            foreach (var ch in value)
+            {
+                if (Const.UnreservedChars.IndexOf(ch) != -1)
+                    stringBuilder.Append(ch);
+                else
+                    stringBuilder.Append('%' + $"{(int)ch:X2}");
+            }
+            return stringBuilder.ToString();
         }
     }
 }

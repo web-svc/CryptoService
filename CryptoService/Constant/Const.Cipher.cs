@@ -6,5 +6,6 @@
         internal const string BasicAuth = "Basic";
         internal const string BearerAuth = "Bearer";
         internal const string OAuth = "OAuth";
+        internal const string UnreservedChars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_.~";
     }
 }
