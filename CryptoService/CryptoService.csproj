@@ -20,7 +20,7 @@ AES
 Checksum
 Base64
 Auth Service: Basic &amp; Bearer, ConstructOAuth, GetOAuthSignature</PackageReleaseNotes>
-    <Version>1.1.1</Version>
+    <Version>1.1.2</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -36,6 +36,10 @@ Auth Service: Basic &amp; Bearer, ConstructOAuth, GetOAuthSignature</PackageRele
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WebSvc.Helper" Version="1.1.9" />
   </ItemGroup>
 
 </Project>

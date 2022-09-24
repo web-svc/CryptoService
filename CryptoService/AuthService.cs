@@ -3,6 +3,8 @@
     using CryptoService.Constant;
     using CryptoService.Interface;
     using CryptoService.Model;
+    using Helper;
+    using Helper.Interface;
     using System;
     using System.Collections.Generic;
     using System.Linq;
@@ -12,6 +14,7 @@
     public class AuthService : IAuthService
     {
         readonly IBase64 base64 = new Algorithms();
+        readonly IUrlService urlService = new UrlService();
 
         string IAuthService.ConstructBearerAuth(string CipherText)
         {
@@ -52,21 +55,9 @@
         public string GetOAuthSignature(string compositeKey, Dictionary<string, string> form, string BaseUrl, string UrlQueryString = null)
         {
             string baseString = string.Join("&", form.Select(x => $"{x.Key}={x.Value}").ToArray());
-            string CipherText = $"GET&{Uri.EscapeDataString(BaseUrl)}{(string.IsNullOrEmpty(UrlQueryString) ? $"&" : $"&{UrlQueryString}{UrlEncode("&")}")}{Uri.EscapeDataString(baseString)}";
+            string CipherText = $"GET&{Uri.EscapeDataString(BaseUrl)}{(string.IsNullOrEmpty(UrlQueryString) ? $"&" : $"&{UrlQueryString}{urlService.UrlEncode("&")}")}{Uri.EscapeDataString(baseString)}";
             using HMACSHA1 hasher = new HMACSHA1(Encoding.ASCII.GetBytes(compositeKey));
             return Convert.ToBase64String(hasher.ComputeHash(Encoding.ASCII.GetBytes(CipherText)));
-        }
-        private static string UrlEncode(string value)
-        {
-            var stringBuilder = new StringBuilder();
-            foreach (var ch in value)
-            {
-                if (Const.UnreservedChars.IndexOf(ch) != -1)
-                    stringBuilder.Append(ch);
-                else
-                    stringBuilder.Append('%' + $"{(int)ch:X2}");
-            }
-            return stringBuilder.ToString();
         }
     }
 }
