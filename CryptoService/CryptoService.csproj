@@ -19,8 +19,8 @@ MD5
 AES
 Checksum
 Base64
-Auth Service: Basic &amp; Bearer</PackageReleaseNotes>
-    <Version>1.0.7</Version>
+Auth Service: Basic &amp; Bearer, ConstructOAuth</PackageReleaseNotes>
+    <Version>1.0.8</Version>
   </PropertyGroup>
 
   <ItemGroup>

@@ -38,6 +38,9 @@
             return $"{Const.BasicAuth} {base64.Encrypt($"{basicAuthInput.UserName}:{basicAuthInput.Password}")}";
         }
 
-
+        public string ConstructOAuth(string CipherText)
+        {
+            return $"{Const.OAuth} {CipherText}";
+        }
     }
 }
