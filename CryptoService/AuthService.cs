@@ -3,6 +3,9 @@
     using CryptoService.Constant;
     using CryptoService.Interface;
     using CryptoService.Model;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class AuthService : IAuthService
     {
@@ -38,8 +41,9 @@
             return $"{Const.BasicAuth} {base64.Encrypt($"{basicAuthInput.UserName}:{basicAuthInput.Password}")}";
         }
 
-        public string ConstructOAuth(string CipherText)
+        public string ConstructOAuth(Dictionary<string, string> OAuthInput)
         {
+            string CipherText = string.Join(", ", OAuthInput.Select(x => $"{x.Key}=\"{Uri.EscapeDataString(x.Value)}\"").ToArray());
             return $"{Const.OAuth} {CipherText}";
         }
     }
